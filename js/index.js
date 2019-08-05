@@ -40,3 +40,71 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+ 
+let ctaImage = document.getElementById("cta-img");
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let nav = document.querySelectorAll('a');
+
+nav.forEach(function(value, i){
+  value.textContent = siteContent.nav[`nav-item-${i+1}`];
+})
+
+
+
+let mainHeading = document.querySelector('h1');
+mainHeading.textContent = siteContent.cta['h1'];
+
+mainHeading.style.width = '40%';
+
+
+let button = document.querySelector('button');
+button.textContent = siteContent.cta['button'];
+
+let subHeadings = document.querySelectorAll('h4');
+
+subHeadings[0].textContent = siteContent["main-content"]["features-h4"];
+subHeadings[1].textContent = siteContent["main-content"]["about-h4"];
+subHeadings[2].textContent = siteContent["main-content"]["services-h4"];
+subHeadings[3].textContent = siteContent["main-content"]["product-h4"];
+subHeadings[4].textContent = siteContent["main-content"]["vision-h4"];
+
+let mainText = document.querySelectorAll('p');
+
+mainText[0].textContent = siteContent["main-content"]["features-content"];
+mainText[1].textContent = siteContent["main-content"]["about-content"];
+mainText[2].textContent = siteContent["main-content"]["services-content"];
+mainText[3].textContent = siteContent["main-content"]["product-content"];
+mainText[4].textContent = siteContent["main-content"]["vision-content"];
+
+subHeadings[5].textContent = siteContent["contact"]["contact-h4"];
+mainText[5].textContent = siteContent["contact"]["address"];
+mainText[6].textContent = siteContent["contact"]["phone"];
+mainText[7].textContent = siteContent["contact"]["email"];
+
+mainText[8].textContent = siteContent["footer"]["copyright"];
+
+nav[0].style.color = 'green';
+nav[1].style.color = 'green';
+nav[2].style.color = 'green';
+nav[3].style.color = 'green';
+nav[4].style.color = 'green';
+nav[5].style.color = 'green';
+
+let navigation = document.querySelector('nav');
+
+let firstNav = document.createElement('a');
+let secondNav = document.createElement('a');
+
+firstNav.textContent = "Blog";
+secondNav.textContent = "Future";
+
+navigation.appendChild(firstNav);
+navigation.prepend(secondNav);
+
+firstNav.style.color = 'green';
+secondNav.style.color = 'green';
+
