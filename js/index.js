@@ -87,12 +87,9 @@ mainText[7].textContent = siteContent["contact"]["email"];
 
 mainText[8].textContent = siteContent["footer"]["copyright"];
 
-nav[0].style.color = 'green';
-nav[1].style.color = 'green';
-nav[2].style.color = 'green';
-nav[3].style.color = 'green';
-nav[4].style.color = 'green';
-nav[5].style.color = 'green';
+nav.forEach(item => {
+  item.style.color = 'green';
+})
 
 let navigation = document.querySelector('nav');
 
@@ -108,3 +105,5 @@ navigation.prepend(secondNav);
 firstNav.style.color = 'green';
 secondNav.style.color = 'green';
 
+let contact = document.querySelector('.contact');
+contact.style.width = '20%';
